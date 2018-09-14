@@ -39,8 +39,8 @@ func (g *game) combinationIsWinning(combination []int) (bool, string) {
 	var combinationType string
 
 	for _, coord := range combination {
-		x := int(math.Mod(float64(coord), 3))
-		y := int(math.Floor(float64(coord) / 3))
+		x := int(math.Floor(float64(coord) / 3))
+		y := int(math.Mod(float64(coord), 3))
 		cell := g.board[x][y]
 		if cell == emptyCell {
 			return false, ""
