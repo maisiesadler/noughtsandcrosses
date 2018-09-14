@@ -1,11 +1,13 @@
 package main
 
 import (
+	"bufio"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
+	"os"
 
 	"./game"
 )
@@ -32,6 +34,14 @@ func readBody(w http.ResponseWriter, r *http.Request, o interface{}) interface{}
 }
 
 func main() {
+	go startServer()
+
+	// quit on new line
+	reader := bufio.NewReader(os.Stdin)
+	reader.ReadString('\n')
+}
+
+func startServer() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "%s", game.String())
 	})

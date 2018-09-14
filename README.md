@@ -1,1 +1,3 @@
 # noughtsandcrosses
+
+### How to run
