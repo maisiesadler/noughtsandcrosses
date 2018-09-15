@@ -4,11 +4,24 @@
 
 Make sure you have docker installed.
 
+In a new directory, create the following file
+
+```
+package main
+
+import "github.com/maisiesadler/noughtsandcrosses/server"
+
+func main() {
+	server.StartServer()
+}
+```
+
 Create a dockerfile
 
 ```
 FROM golang:latest
-RUN go get -u github.com/maisiesadler/noughtsandcrosses 
+RUN go get -u github.com/maisiesadler/noughtsandcrosses/game
+RUN go get -u github.com/maisiesadler/noughtsandcrosses/server
 RUN mkdir /app
 WORKDIR /app
 COPY . /app

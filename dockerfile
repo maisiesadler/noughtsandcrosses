@@ -1,5 +1,6 @@
 FROM golang:latest 
-RUN go get -u github.com/maisiesadler/noughtsandcrosses 
+RUN go get -u github.com/maisiesadler/noughtsandcrosses/game
+RUN go get -u github.com/maisiesadler/noughtsandcrosses/server
 RUN mkdir /app
 WORKDIR /app
 COPY . /app
