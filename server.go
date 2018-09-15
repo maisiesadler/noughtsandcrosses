@@ -9,7 +9,7 @@ import (
 	"net/http"
 	"os"
 
-	"./game"
+	"github.com/maisiesadler/noughtsandcrosses/game"
 )
 
 func readBody(w http.ResponseWriter, r *http.Request, o interface{}) interface{} {
