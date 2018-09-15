@@ -1,13 +1,11 @@
 package main
 
 import (
-	"bufio"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
-	"os"
 
 	"github.com/maisiesadler/noughtsandcrosses/game"
 )
@@ -34,11 +32,7 @@ func readBody(w http.ResponseWriter, r *http.Request, o interface{}) interface{}
 }
 
 func main() {
-	go startServer()
-
-	// quit on new line
-	reader := bufio.NewReader(os.Stdin)
-	reader.ReadString('\n')
+	startServer()
 }
 
 func startServer() {
