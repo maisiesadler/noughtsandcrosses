@@ -1,6 +1,6 @@
 package main
 
-import "./server"
+import "github.com/maisiesadler/noughtsandcrosses/server"
 
 func main() {
 	server.StartServer()
