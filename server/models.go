@@ -1,4 +1,4 @@
-package main
+package server
 
 type placeRequest struct {
 	Counter string `json:"counter"`
