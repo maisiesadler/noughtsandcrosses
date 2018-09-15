@@ -7,8 +7,7 @@ Make sure you have docker installed.
 Create a dockerfile
 
 ```
-FROM golang:latest 
-ENV GOPATH=/usr/local/go/src/github.com/maisiesadler
+FROM golang:latest
 RUN go get -u github.com/maisiesadler/noughtsandcrosses 
 RUN mkdir /app
 WORKDIR /app
