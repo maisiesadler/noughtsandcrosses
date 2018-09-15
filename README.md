@@ -40,6 +40,7 @@ X Turn
 
 ### Place counter
 POST http://localhost:50/place
+
 body: {
 	"counter": "X",
 	"X": 0,
