@@ -33,13 +33,13 @@ Run
 
 ```
 docker build . -t noughtsandcrosses
-docker run -d -p 50:8080 noughtsandcrosses
+docker run -d -p 5000:8080 noughtsandcrosses
 ```
 
 ## How to play
 
 ### View the board
-GET http://localhost:50
+GET http://localhost:5000
 
 Example response:
 ```
@@ -52,7 +52,7 @@ X Turn
 ```
 
 ### Place counter
-POST http://localhost:50/place
+POST http://localhost:5000/place
 
 body: {
 	"counter": "X",
