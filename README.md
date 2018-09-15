@@ -46,6 +46,8 @@ body: {
 	"X": 0,
 	"Y": 2
 }
+
+Example response:
 ```
 O Turn
    |   |   
